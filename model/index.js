@@ -1,27 +1,28 @@
 const mongoose = require("mongoose")
 const indexSchema = new mongoose.Schema({
-invitation : {
+    
+invitation:{
     type: String,
-    required:true
+    // required:true
 },
 totalOffers:{
     type: Number,
-    required: true,
+    // required: true,
 
 },
 highestCtc:{
     type: Number,
-    required: true,
+    // required: true,
 
 },
 highestStipend:{
     type: Number,
-    required: true,
+    // required: true,
 
 },
 avgStipend:{
     type: Number,
-    required: true,
+    // required: true,
 
 },
 indexPics:{

@@ -7,6 +7,7 @@ var myChart = new Chart(ctx, {
      datasets:[
          {
              data:[86,119,150,205,364],
+            // data:[],
              label: "No. of offers above 20l",
              backgroundColor:["blue","blue","blue","blue","blue"],
 
@@ -58,7 +59,7 @@ var myChart = new Chart(ctx, {
 var ctx = document.getElementById("myChart1").getContext("2d");
 
 var myChart1 = new Chart(ctx, {
- type:"doughnut",
+ type:"bar",
  data :{
      labels:[" 17-18","18-19","19-20","20-21","21-22"],
      datasets:[

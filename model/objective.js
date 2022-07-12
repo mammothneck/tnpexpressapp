@@ -1,10 +1,11 @@
 const mongoose = require("mongoose")
 const objectiveSchema = new mongoose.Schema({
-chancellor : {
+vission : {
     type: String,
     required:true
 },
-HOD:{
+
+mission:{
     type: String,
     required: true,
 

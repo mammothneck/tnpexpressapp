@@ -1,14 +1,57 @@
 const mongoose = require("mongoose")
 const chartSchema = new mongoose.Schema({
-chancellor : {
+    
+totalOffersPlacement : {
     type: String,
-    required:true
 },
-HOD:{
+highestCTCPlacement:{
     type: String,
-    required: true,
 
 },
+averageCTCPlacement:{
+    type: String,
+
+},
+highestStipendIntern:{
+    type: String,
+
+},
+averageStipendIntern:{
+    type: String,
+
+},
+highestPackage21:{
+    type: String,
+
+},
+highestPackage20:{
+    type: String,
+
+},
+highestPackage19:{
+    type: String,
+
+},
+myChart:{
+      type:String
+},
+myChart3:{
+    type:String
+
+},
+myChart4:{
+    type:String
+
+},
+myChart1:{
+      type:String
+
+},
+myChart2:{
+    type:String
+
+},
+
 
 })
 

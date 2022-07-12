@@ -2,11 +2,11 @@ const mongoose = require("mongoose")
 const messageSchema = new mongoose.Schema({
 chancellor : {
     type: String,
-    required:true
+    // required:true
 },
 HOD:{
     type: String,
-    required: true,
+    // required: true,
 
 },
 

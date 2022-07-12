@@ -54,7 +54,7 @@
                      <nav class="collapse navbar-collapse navbar-responsive-collapse pull-left" >
                         <ul class="nav navbar-nav" >
                            <li class="dropdown">
-                              <a href="index.html" >T & P DEPARTMENT </a>
+                              <a href="/" >T & P DEPARTMENT </a>
                              
                            </li>
                            </ul>
@@ -62,42 +62,42 @@
                      <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right" >
                         <ul class="nav navbar-nav" >
                            <li class="dropdown">
-                              <a href="index.html" >Home </a>
+                              <a href="/" >Home </a>
                              
                            </li>
                            <!-- Home li end -->
                            <li class="dropdown">
-                              <a href="message.html">Message</a>
+                              <a href="/">Message</a>
                              
                            </li>
                            <!-- About li end -->
                            <li class="dropdown">
-                              <a href="objective.html">Objective</a>
+                              <a href="/">Objective</a>
                               
                            </li>
                            <!-- Speakers li end -->
                            <li class="dropdown">
-                              <a href="procedure.html" >Procedure </a>
+                              <a href="/procedure" >Procedure </a>
                              
                            </li>
                            <!-- Schedule li end -->
                            <li class="dropdown">
-                              <a href="academics.html">Academics</a>
+                              <a href="/academics">Academics</a>
                               
                            </li>
                            <!-- Blog li end -->
-                           <li><a href="whydtu.html">Why DTU</a>
+                           <li><a href="/whydtu">Why DTU</a>
                            </li>
                            <li class="dropdown">
-                              <a href="chart.html">Placement Stats</a>
+                              <a href="/chart">Placement Stats</a>
                               
                            </li>
                            <li class="dropdown">
-                              <a href="FAQ.html">FAQ's</a>
+                              <a href="/FAQ">FAQ's</a>
                               
                            </li>
                         </li>  <li class="dropdown">
-                           <a href="contact.html">CONTACT</a>
+                           <a href="/contact">CONTACT</a>
                            
                         </li>                           
                         </ul>
@@ -127,18 +127,17 @@
                         <div style="width: 50%;text-align: center;">
                            <h2 class="intro-title">Placement Data(2021-22)</h2>
                            <p><li>
-                             Total Offers : 2082</li></p>
-                              <p><li>Highest CTC : 1.2 Cr </li></p>
-                              <p><li>Average CTC : 15.31 LPA</li></p>
+                             Total Offers : <%=totalOffersPlacement%></li></p>
+                              <p><li>Highest CTC : <%=highestCTCPlacement%> </li></p>
+                              <p><li>Average CTC : <%=averageCTCPlacement%></li></p>
                              
                                
                         </div>
                         <div style="width: 50%; text-align: center;">
                            <h2 class="intro-title">Intern Data(2021-22)</h2>
                            <p><li>
-                              Highest stipend : 2 lakh/month</li></p>
-                              <p>(Sprinkler)</p>
-                              <p><li> Average Stipend : 59000/month </li></p>
+                              Highest stipend : <%=highestStipendIntern%></li></p>
+                              <p><li> Average Stipend : <%=averageStipendIntern%> </li></p>
                               
 
                         </div>
@@ -146,9 +145,9 @@
                      <div style="text-align: center; font-size: 20px;">
                         <h2 class="intro-title"  >Highest Packages</h2>
                         <p><li>
-                           Amazon Ireland : 1.2 Cr (20-21)</li></p>
-                           <p><li>Amazon Ireland : 1.07 Cr (19-20)</li></p>
-                           <p><li> Facebook : 1.02 Cr (18-19)</li></p>
+                           <%=highestPackage21%></li></p>
+                           <p><li><%=highestPackage20%></li></p>
+                           <p><li><%=highestPackage19%></li></p>
                            
 
                      </div>
@@ -222,6 +221,161 @@
       </footer>
 
         <script src="js/chart.js"></script>
-        <script src="js/custom.js"></script>
+<script>
+   var ctx = document.getElementById("myChart").getContext("2d");
+
+var myChart = new Chart(ctx, {
+ type:"bar",
+ data :{
+     labels:[" 17-18","18-19","19-20","20-21","21-22"],
+     datasets:[
+         {
+            //  data:[86,119,150,205,364],
+             data:[<%=myChart%>],
+             label: "No. of offers above 20l",
+             backgroundColor:["blue","blue","blue","blue","blue"],
+
+         },
+         {
+            // data:[289,413,473,549,795],
+            data:[<%=myChart3%>],
+            label: "No. Of offers btw 10l-20l",
+            backgroundColor:["red","red","red","red","red"],
+
+        },
+        {
+            // data:[294,325,272,355,300],
+            data:[<%=myChart4%>],
+            label: "No. of Companies",
+            backgroundColor:["blue","blue","blue","blue","red"],
+
+        },
+     ],
+ },
+ options:{
+     responsive:false,
+     layout:{
+         padding:{
+             
+             left:40,
+         },
+     },
+     tooltips:{
+
+         enabled:true,
+         titleFontSize:30,
+         titleSpacing: 3,
+
+     },
+     title: {
+         display: true,
+         text: "custom size",
+         fontSize: 40,
+         position: "bottom",
+     },
+     animation:{
+         duration: 5000,
+         easing: "easeInOutBounce",
+     },
+ },
+
+
+});
+
+var ctx = document.getElementById("myChart1").getContext("2d");
+
+var myChart1 = new Chart(ctx, {
+ type:"bar",
+ data :{
+     labels:[" 17-18","18-19","19-20","20-21","21-22"],
+     datasets:[
+         {
+            //  data:[1153,1435,1574,1772,2082],
+             data:[<%=myChart1%>],
+             label: " Total No. of offers",
+             backgroundColor:["lime","lime","lime","lime","lime"],
+
+         },
         
+         
+     ],
+ },
+ options:{
+     responsive:false,
+     layout:{
+         padding:{
+             
+             left:40,
+         },
+     },
+     tooltips:{
+
+         enabled:true,
+         titleFontSize:30,
+         titleSpacing: 3,
+
+     },
+     title: {
+         display: true,
+         text: "custom size",
+         fontSize: 40,
+         position: "bottom",
+     },
+     animation:{
+         duration: 5000,
+         easing: "easeInOutBounce",
+     },
+ },
+
+
+});
+
+
+var ctx = document.getElementById("myChart2").getContext("2d");
+
+var myChart2 = new Chart(ctx, {
+ type:"bar",
+ data :{
+     labels:[" 17-18","18-19","19-20","20-21","21-22"],
+     datasets:[
+        
+         {
+            // data:[9.42,12.12,12.24,12.37,15.31],
+            data:[<%=myChart2%>],
+            label: "Average Salary",
+            backgroundColor:["blue","blue","blue","blue","red"],
+
+        },
+     ],
+ },
+ options:{
+     responsive:false,
+     layout:{
+         padding:{
+             
+             left:30,
+         },
+     },
+     tooltips:{
+
+         enabled:true,
+         titleFontSize:30,
+         titleSpacing: 3,
+
+     },
+     title: {
+         display: true,
+         text: "custom size",
+         fontSize: 40,
+         position: "bottom",
+     },
+     animation:{
+         duration: 5000,
+         easing: "easeInOutBounce",
+     },
+ },
+
+
+});
+</script>        
         </body>
