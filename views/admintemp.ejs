@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Admin Page T&P</title> 
-
-    <link rel="stylesheet" href="css/adminstyle.css">
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/c80561e6bf.js" crossorigin="anonymous"></script> -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
     
 </head>
 <body>
-    <div class="main">
  
-<div class="box containermain">
-      
+<div class="box">
+    <div class="">
+    <header>  
     <h1>Index Page</h1>
    
-  
-    
+    </header>
+  </div>
+    <div class="">
+    <!-- <h2>Presonal Details</h2> -->
     <form method="post" action="/updateIndex=" class="box">
         
         <p>invitation:<input type="text"value=""  name="invitation"required placeholder="invitation"> </p>
@@ -30,11 +25,25 @@
         <p>highestCtc:<input type="Number"value="" name="highestCtc"required placeholder="highestCtc"></p>
         <p>highestStipend:<input type="Number"value="" name="highestStipend"required placeholder="highestStipend"></p>
         <p>avgStipend:<input type="number"value="" name="avgStipend"required placeholder="avgStipend"></p>
-     
+        <!-- <p>Email:<input type="email" placeholder="abc123@email.com"></p> -->
+        <!-- <p>Address:
+          <textarea class="form-control" name="address" rows="3"></textarea>
+        </p> -->
+        <!-- <p>
+            Card Type:
+             <select >
+                <option value="visa">VISA</option>
+                <option value="Rupay">RUPAY</option>
+                <option value="Mastercard">MASTERCARD</option>
+             </select>
+        </p> -->
+        <!-- <p>Card Number:<input type="number" required placeholder="1111-2222-3333-4444" name="cardno."></p> -->
+        <!-- <p>Expiration Date:<input type="date" name="carddate"></p>
+        <p>CVV:<input type="number" required placeholder="123" name="cvv"></p> -->
         <input type="submit" value="SUBMIT">
-        
+        <!-- <input type="reset" value="RESET"> -->
     </form>
-   
+     </div>
     </div>
 
 
@@ -42,39 +51,50 @@
 
 
     <div class="containermain">
-        
+        <div class="cointainerh">
+        <header>  
         <h1>Message Page</h1>
        
-        
-       
+        </header>
+      </div>
+        <div class="containerb">
+        <!-- <h2>Presonal Details</h2> -->
         <form method="post" action="/updateMessage" class="box">
             <p>Chancellor msg:<input type="text"value="" required placeholder="Chancellor" name="chancellor" >  </p>
             <p>Hod msg:<input type="text"value="" required placeholder="HOD" name="HOD">  </p>
             <input type="submit" value="SUBMIT">
+            <!-- <input type="reset" value="RESET"> -->
             
         </form>
-        
+         </div>
         </div>
 
         <div class="containermain">
-           
+          <div class="cointainerh">
+          <header>  
           <h1>Objective Page</h1>
-        
          
+          </header>
+        </div>
+          <div class="containerb">
+          <!-- <h2>Presonal Details</h2> -->
           <form method="post" action="/updateObjective" class="box">
               <p>Vission:<input type="text" value=""required placeholder="vission " name="vission">  </p>
               <p>Mission:<input type="text" value=""required placeholder="mission" name="mission">  </p>
               <input type="submit" value="SUBMIT">
-              
+              <!-- <input type="reset" value="RESET"> -->
               
           </form>
-           
+           </div>
           </div>
           <div class="containermain">
-             
+            <div class="cointainerh">
+            <header>  
             <h1>Chart Page</h1>
-          
            
+            </header>
+          </div>
+            <div class="containerb">
             <form method="post" action="/updateChart" class="box">
                 <p>totalOffersPlacement<input type="text" value=""required placeholder="totalOffersPlacement" name="totalOffersPlacement">  </p>
                 <p>highestCTCPlacement:<input type="text" value=""required placeholder="highestCTCPlacement " name="highestCTCPlacement">  </p>
@@ -95,9 +115,9 @@
                 <!-- <input type="reset" value="RESET"> -->
                 
             </form>
-            
+             </div>
             </div>
 
-        </div>
+       
 </body>
 </html>

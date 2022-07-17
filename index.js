@@ -46,30 +46,29 @@ app.use(session({
 }))
 
 app.post('/updateIndex',async function(req, res){
-      console.log(req.body)
+      // console.log(req.body)
       let data = await Index.findOneAndUpdate({}, req.body)
-      console.log(data) 
+      // console.log(data) 
 })
 app.post('/updateMessage',async function(req, res){
-      console.log(req.body)
+      // console.log(req.body)
       let  data = await Message.findOneAndUpdate({}, req.body)
-      console.log(data) 
+      // console.log(data) 
 })
 app.post('/updateObjective',async function(req, res){
-      console.log(req.body)
+      // console.log(req.body)
       let data = await Objective.findOneAndUpdate({}, req.body)         
-      console.log(data) 
+      // console.log(data) 
 })
 app.post('/updateChart',async function(req, res){
-      console.log(req.body)
-      let data = await Chart.findOneAndUpdate({}, req.body)
-          
-      console.log(data) 
+      // console.log(req.body)
+      let data = await Chart.findOneAndUpdate({}, req.body)       
+      // console.log(data) 
 })
 app.post('/updateProcedure',async function(req, res){
-      console.log(req.body)
+      // console.log(req.body)
       let data = await Procedure.findOneAndUpdate({}, req.body)
-      console.log(data) 
+      // console.log(data) 
 })
 
 
@@ -81,16 +80,9 @@ app.post('/createChart',async function(req,res){
 
 
 app.get('/admin',async function(req, res){
-      let data={};
-      // let indexData = await Index.find({})
-      let chartData = await Chart.find({})
-      let messageData = await Message.find({});
-      // let objectiveData = await Objective.find({})
-      // data
-      console.log("####DATA####",chartData[0]._doc,messageData[0]);
-
+   
       if(req.session.user){
-            res.render('admin.ejs', chartData[0]);
+            res.render('admin.ejs');
       }
       else{
             res.redirect('/login');
