@@ -27,6 +27,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cookieParser());
 app.use(cors())
+
+mongoose.set("strictQuery", false);
 mongoose.connect("mongodb+srv://Mammothneck:stupid26@cluster0.ib7hr.mongodb.net/test");
 mongoose.connection.on("connected" , () =>{
       console.log("connected to mongoosejs")
