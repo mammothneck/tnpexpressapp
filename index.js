@@ -29,9 +29,10 @@ app.use(cookieParser());
 app.use(cors())
 
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://mammothneck:stupid26@@cluster0.hhwwzzk.mongodb.net");
-// mongodb+srv://mammothneck:<password>@cluster0.hhwwzzk.mongodb.net/
-//mongodb+srv://Mammothneck:stupid26@cluster0.ib7hr.mongodb.net/test
+mongoose.connect('mongodb+srv://mammothneck:zqLbU3whBf31vMc6@cluster0.hhwwzzk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+
+
+
 mongoose.connection.on("connected" , () =>{
       console.log("connected to mongoosejs")
 });

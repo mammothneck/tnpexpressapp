@@ -1,13 +1,13 @@
 const mongoose = require("mongoose")
 const objectiveSchema = new mongoose.Schema({
-vission : {
+vision : {
     type: String,
-    required:true
+    // required:true
 },
 
 mission:{
     type: String,
-    required: true,
+    // required: true,
 
 },
 
